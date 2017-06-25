@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ZEC&tsyms=USD',function(zec){
+            console.log('success');
+            $.each(zec.usd,function(i,price){
+                $('ul').append('<li>'+usd.price+'</li>');
+            });
+        }).error(function(){
+            console.log('error');
+        });
+    });
+</script>
+</head>
+<body>
+    <ul></ul>
+</body>
+</html>
